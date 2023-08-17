@@ -7,10 +7,7 @@
         :questionsAnswered="questionsAnswered"
         @question-answered="questionsAns"
       />
-      <!-- :namaYangAkanDitulisDiChildComponent="data" -->
-      <!-- Jika Anda tidak menggunakan titik dua (:) sebelum nama properti seperti ini: questions="questions", maka Anda akan mengirimkan string literal "questions" ke komponen anak sebagai nilai properti, bukan nilai dari variabel questions yang ada di komponen induk.
-Ketika Anda menggunakan titik dua (:) sebelum properti seperti :questions="questions", ini mengindikasikan bahwa Anda ingin mengikat nilai properti questions pada komponen anak ke nilai dari variabel questions yang ada di komponen induk. Ini memungkinkan komunikasi data antara komponen induk dan komponen anak.
- -->
+
       <result v-else :results="results" :totalCorrect="totalCorrect" />
     </transition>
     <button type="button" class="reset-btn" @click.prevent="reset" v-if="questionsAnswered == questions.length">
